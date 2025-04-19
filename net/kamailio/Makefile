@@ -10,7 +10,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=kamailio
 PKG_VERSION:=6.0.1
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_SOURCE_URL:=https://github.com/kamailio/kamailio/archive/refs/tags/
 PKG_SOURCE:=$(PKG_VERSION).tar.gz
@@ -412,7 +412,7 @@ MAKE_FLAGS += \
 	LIBDIR=lib \
 	PREFIX=/usr \
 	cfg_prefix="$(PKG_INSTALL_DIR)" \
-	cfg_target=/etc/kamailio \
+	cfg_target=/etc/kamailio/ \
 	group_include="standard" \
 	include_modules="$$(INCL_MODULES) $(EXTRA_MODULES)" \
 	quiet=verbose \
